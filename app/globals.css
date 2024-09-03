@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 26, 26, 26;
+  --background-rgb: 229, 229, 229;
+  --card-rgb: 26, 26, 26;
+  --foreground-text: 0, 0, 0;
+  --paragraph-text: 26, 26, 26;
+  --footer-border: 46, 46, 46;
+  --test: rgb(78, 78, 78);
+
+  /* accent */
+  --brown: 129, 98, 65;
+}
+
+[data-theme="dark"] {
+  --test: rgb(198, 198, 198);
+  --foreground-text: 229, 229, 229;
+  --paragraph-text: 229, 229, 229;
+  --foreground-rgb: 229, 229, 229;
+  --background-rgb: 26, 26, 26;
+  --card-rgb: 229, 229, 229;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--footer-border)) transparent;
+}
+
+::selection {
+  color: rgb(var(--background-rgb));
+  background: rgb(var(--brown));
+}
+
+@layer base {
+  html {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-rgb));
+  }
+
+  .intro {
+    @media screen and (min-width: 768px) {
+      height: calc(100vh - 50px);
+    }
+  }
+
+  .card {
+    background-color: rgba(var(--card-rgb), 0.1);
+  }
+
+  /* h1 {
+    color: rgb(var(--foreground-text));
+  } */
+
+  h1 {
+    @apply text-brown;
+  }
+
+  .layout {
+    display: grid;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: auto 700px auto;
+    }
+  }
+
+  .top {
+    mask-image: linear-gradient(to bottom, #000 25%, transparent);
+  }
+
+  p {
+    line-height: 1.7;
+    color: rgb(var(--test));
+    color: var(--test);
+  }
+
+  body {
+    font-family: "Manrope", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+  }
+
+  p,a {
+    font-family: "Manrope", sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
