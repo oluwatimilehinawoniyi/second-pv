@@ -1,6 +1,6 @@
 export default function Process() {
   return (
-    <section className="flex flex-col items-end gap-8 md:h-[400px] md:flex-row">
+    <section className="flex flex-col items-end gap-8 md:mt-10 md:h-[400px] md:flex-row">
       <div className="flex flex-col gap-4 md:w-2/5 md:gap-10">
         <h1 className="text-2xl font-bold">
           After trying a ton of things, I stuck with these principles

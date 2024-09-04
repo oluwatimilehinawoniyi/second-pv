@@ -42,7 +42,8 @@
 
   .intro {
     @media screen and (min-width: 768px) {
-      height: calc(100vh - 50px);
+      height: 75vh;
+      padding-top: 100px;
     }
   }
 
@@ -90,8 +91,16 @@
     font-weight: 400;
   }
 
-  p,a {
+  p,
+  a,
+  span {
     font-family: "Manrope", sans-serif;
+  }
+
+  .favicon {
+    fill: rgb(var(--brown));
+    fill-rule: evenodd;
+    stroke-width: 0px;
   }
 }
 

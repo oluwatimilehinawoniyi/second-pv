@@ -2,7 +2,7 @@ import Image from "next/image";
 import Visualizer from "./Name/AudioVisualizer";
 import Links from "../common/Links";
 
-const TOP_PADDING = 100;
+// const TOP_PADDING = 100;
 
 export default function Introduction() {
   return (
@@ -21,7 +21,7 @@ export default function Introduction() {
           <h1 className="text-5xl font-extrabold capitalize">
             oluwatimilehin <br className="hidden" /> awoniyi
           </h1>
-          <p className="text-xl font-semibold opacity-50">
+          <p className="text-lg font-medium opacity-50">
             Frontend and UX Engineer
           </p>
         </div>

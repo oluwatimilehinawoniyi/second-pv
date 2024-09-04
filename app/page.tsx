@@ -12,8 +12,8 @@ export default function Home() {
       display={
         <>
           <Introduction />
-          <Process />
           <Projects />
+          <Process />
           <Contact />
         </>
       }
