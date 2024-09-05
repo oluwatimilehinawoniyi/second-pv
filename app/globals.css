@@ -63,7 +63,7 @@
     display: grid;
 
     @media screen and (min-width: 768px) {
-      grid-template-columns: auto 700px auto;
+      grid-template-columns: 1fr 700px 1fr;
     }
   }
 
@@ -93,14 +93,9 @@
 
   p,
   a,
-  span {
+  span,
+  li {
     font-family: "Manrope", sans-serif;
-  }
-
-  .favicon {
-    fill: rgb(var(--brown));
-    fill-rule: evenodd;
-    stroke-width: 0px;
   }
 }
 

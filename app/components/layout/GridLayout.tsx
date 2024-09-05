@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import Top from "../UI/Top";
+import Footer from "../UI/Footer";
 
 interface LayoutProps {
   display: ReactNode;
@@ -12,12 +14,14 @@ export default function GridLayout({
   leftBar,
 }: LayoutProps) {
   return (
-    <main className="layout w-full pb-8">
-      <section className="">{leftBar}</section>
-      <section className="mx-auto flex w-full flex-col gap-8 px-4 md:px-0">
+    <main className="layout relative w-full">
+      <Top />
+      <section className="left sticky top-0 h-screen">{leftBar}</section>
+      <section className="mx-auto flex size-full flex-col gap-8 px-4 pb-12 md:px-0">
         {display}
       </section>
-      <section className="">{rightBar}</section>
+      <section className="right sticky top-0 h-screen">{rightBar}</section>
+      <Footer />
     </main>
   );
 }
