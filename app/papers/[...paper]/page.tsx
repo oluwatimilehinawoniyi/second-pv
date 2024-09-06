@@ -6,7 +6,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   return (
     <GridLayout
       leftBar={
-        <div className="flex h-full w-full flex-col items-center pt-20">
+        <div className="pl-20 flex h-full w-full flex-col items-start pt-20">
           <Navigation
             icon={<FileStack size={16} />}
             title="papers"
