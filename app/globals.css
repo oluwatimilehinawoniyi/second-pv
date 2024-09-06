@@ -42,8 +42,8 @@
 
   .intro {
     @media screen and (min-width: 768px) {
-      height: 75vh;
-      padding-top: 100px;
+      /* height: 75vh; */
+      padding-top: 160px;
     }
   }
 
@@ -67,6 +67,8 @@
   .paper-list:hover .paper:is(:not(.paper:hover)) {
     opacity: 0.3;
   }
+
+  /* .paper-list:first-of-type { } */
 
   /* h1 {
     color: rgb(var(--foreground-text));
