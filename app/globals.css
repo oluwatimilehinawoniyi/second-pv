@@ -47,8 +47,25 @@
     }
   }
 
+  /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
+  .footer {
+    box-shadow: 0px 1px 2px rgb(var(--foreground-rgb));
+  }
+
   .card {
     background-color: rgba(var(--card-rgb), 0.1);
+  }
+
+  .paper {
+    transition: opacity 0.3s ease;
+  }
+
+  .paper-list:hover .paper:hover {
+    opacity: 1;
+  }
+
+  .paper-list:hover .paper:is(:not(.paper:hover)) {
+    opacity: 0.3;
   }
 
   /* h1 {
