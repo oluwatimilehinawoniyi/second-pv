@@ -1,16 +1,46 @@
+"use client";
 import { Dot, House } from "lucide-react";
 import { GridLayout } from "../components";
 import Navigation from "@/app/components/common/Navigation";
 import Link from "next/link";
 import { papers } from "../data/papers";
-
+import { useState } from "react";
 
 export default function Blog() {
+  const [selectedFilters, setSelectedFilters] = useState<string[]>(["all"]);
+
+  const filters = Array.from(new Set(papers.map((item) => item.tag)));
+
+  const handleSelected = (tag: string) => {
+    if (tag === "all") {
+      setSelectedFilters(["all"]);
+    } else {
+      setSelectedFilters((prevFilters) => {
+        const newFilters = prevFilters.filter((item) => item !== "all");
+
+        if (newFilters.includes(tag)) {
+          return newFilters.filter((item) => item !== tag);
+        } else {
+          return [...newFilters, tag];
+        }
+      });
+    }
+  };
+
+  const filteredPapers = selectedFilters.includes("all")
+    ? papers
+    : papers.filter((paper) => selectedFilters.includes(paper.tag));
+
   return (
     <GridLayout
       leftBar={
-        <div className="flex h-full w-full flex-col items-start pl-20 pt-20">
+        <div className="flex h-full w-full flex-col items-start pl-20 pr-8 pt-20">
           <Navigation icon={<House size={16} />} title="home" to="/" />
+          <PaperFilter
+            filters={filters}
+            selectedFilters={selectedFilters}
+            onHandleSelectedFilters={handleSelected}
+          />
         </div>
       }
       // rightBar={
@@ -32,7 +62,7 @@ export default function Blog() {
 
           <div className="mt-12">
             <ul className="paper-list">
-              {papers.map(({ id, title, date, slug, tag }) => (
+              {filteredPapers.map(({ id, title, date, slug, tag }) => (
                 <li key={id} className="paper border-b border-foreground">
                   <Link
                     href={`/papers/${slug}`}
@@ -52,5 +82,53 @@ export default function Blog() {
         </div>
       }
     />
+  );
+}
+
+function PaperFilter({
+  filters,
+  selectedFilters,
+  onHandleSelectedFilters,
+}: {
+  filters: string[];
+  selectedFilters: string[];
+  onHandleSelectedFilters: (tag: string) => void;
+}) {
+  return (
+    <div className="mt-12">
+      <h1 className="capitalize">filter</h1>
+      <div className="mt-4 flex flex-wrap gap-4">
+        {["all", ...filters].map((tag, index) => (
+          <Filter
+            selectedFilters={selectedFilters}
+            tag={tag}
+            key={index}
+            onClick={onHandleSelectedFilters}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Filter({
+  tag,
+  onClick,
+  selectedFilters,
+}: {
+  tag: string;
+  onClick: (tag: string) => void;
+  selectedFilters: string[];
+}) {
+  const isActive = selectedFilters.includes(tag);
+
+  return (
+    <div
+      onClick={() => onClick(tag)}
+      key={tag}
+      className={`flex cursor-pointer items-center gap-2 rounded-full border px-4 text-sm transition-all duration-200 ease-linear ${isActive ? "border-brown bg-brown *:text-background" : "bg-transparent"}`}
+    >
+      <p className="">{tag}</p>
+    </div>
   );
 }

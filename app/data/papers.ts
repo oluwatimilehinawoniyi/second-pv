@@ -23,21 +23,21 @@ export const papers = [
     },
     {
       id: 5,
-      tag: "life",
+      tag: "css",
       title: "lorem ipsum five",
       date: "05/08",
       slug: "lorem5",
     },
     {
       id: 6,
-      tag: "nigeria",
+      tag: "react",
       title: "lorem ipsum six",
       date: "06/08",
       slug: "lorem6",
     },
     {
       id: 7,
-      tag: "life",
+      tag: "java",
       title: "lorem ipsum seven",
       date: "07/08",
       slug: "lorem7",
@@ -58,7 +58,7 @@ export const papers = [
     },
     {
       id: 10,
-      tag: "life",
+      tag: "javascript",
       title: "lorem ipsum ten",
       date: "10/08",
       slug: "lorem10",
