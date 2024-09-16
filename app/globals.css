@@ -25,6 +25,7 @@
 }
 
 * {
+  /* border: 1px solid red; */
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--footer-border)) transparent;
 }
@@ -80,9 +81,14 @@
 
   .layout {
     display: grid;
+    grid-template-columns: 1fr;
 
     @media screen and (min-width: 768px) {
       grid-template-columns: 1fr 700px 1fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 1fr 800px 1fr;
     }
   }
 

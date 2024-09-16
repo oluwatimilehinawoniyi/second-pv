@@ -16,11 +16,11 @@ export default function GridLayout({
   return (
     <main className="layout relative w-full">
       <Top />
-      <section className="left sticky top-0 h-screen">{leftBar}</section>
-      <section className="mx-auto flex size-full flex-col gap-8 px-4 pb-14 md:px-0">
+      <section className="left sticky top-0 lg:h-screen">{leftBar}</section>
+      <section className="mx-auto flex size-full flex-col gap-8 px-4 pb-14 pt-8 md:px-8 md:pt-0 lg:px-0">
         {display}
       </section>
-      <section className="right sticky top-0 h-screen">{rightBar}</section>
+      <section className="right sticky top-0 lg:h-screen">{rightBar}</section>
       <Footer />
     </main>
   );

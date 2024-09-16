@@ -1,0 +1,10 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "eslint.format.enable": true
+}

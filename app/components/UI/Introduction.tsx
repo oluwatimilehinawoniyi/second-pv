@@ -30,6 +30,7 @@ export default function Introduction() {
       {/* about me */}
       <div className="mt-8">
         <p className="mb-1 md:text-justify">
+          {/* I love learning continously and solving problems at the same time: Programming offers me this. knowing how things work and dictating them */}
           I am keen on great user experience (UX) while building market-fit
           products. Currently polishing my skills/knowldege on performance
           optimization and creating appealing SVG animations.
