@@ -19,7 +19,7 @@ export default function Introduction() {
         </div>
         <div className="flex w-full flex-col gap-4 md:h-full md:justify-between">
           <h1 className="text-5xl font-extrabold capitalize">
-            oluwatimilehin <br className="hidden" /> awoniyi
+            oluwatimilehin <br className="hidde" /> awoniyi
           </h1>
           <p className="text-lg font-medium opacity-50">
             Frontend and UX Engineer
