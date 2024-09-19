@@ -12,20 +12,6 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 const metadata: Metadata = {
   title: "Oluwatimilehin Awoniyi",
   description: "A personal portfolio of Oluwatimilehin Awoniyi",
-  // icons: {
-  //   icon: [
-  //     {
-  //       url: "/icon1.svg",
-  //       type: "image/svg+xml",
-  //       media: "(prefers-color-scheme: light)",
-  //     },
-  //     {
-  //       url: "/icon2.svg",
-  //       type: "image/svg+xml",
-  //       media: "(prefers-color-scheme: dark)",
-  //     },
-  //   ],
-  // },
 };
 
 export default function RootLayout({

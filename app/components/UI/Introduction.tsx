@@ -6,9 +6,9 @@ import Links from "../common/Links";
 
 export default function Introduction() {
   return (
-    <section className="intro flex w-full flex-col md:justify-center">
-      <div className="flex w-full flex-col items-end gap-4 md:h-40 md:flex-row md:gap-8">
-        <div className="relative h-80 w-full overflow-hidden rounded-lg md:h-40 md:w-2/5">
+    <section className="intro pt20 flex w-full flex-col md:justify-center">
+      <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-end md:h-40 md:gap-8">
+        <div className="relative hidden h-40 w-full overflow-hidden rounded-lg sm:block md:w-2/5">
           <Image
             src="/profile.webp"
             priority={true}
@@ -18,8 +18,8 @@ export default function Introduction() {
           />
         </div>
         <div className="flex w-full flex-col gap-4 md:h-full md:justify-between">
-          <h1 className="text-5xl font-extrabold capitalize">
-            oluwatimilehin <br className="hidde" /> awoniyi
+          <h1 className="text-4xl font-extrabold capitalize sm:text-5xl">
+            oluwatimilehin <br className="" /> awoniyi
           </h1>
           <p className="text-lg font-medium opacity-50">
             Frontend and UX Engineer
@@ -29,7 +29,7 @@ export default function Introduction() {
 
       {/* about me */}
       <div className="mt-8">
-        <p className="mb-1 md:text-justify">
+        <p className="mb-2 md:text-justify">
           {/* I love learning continously and solving problems at the same time: Programming offers me this. knowing how things work and dictating them */}
           I am keen on great user experience (UX) while building market-fit
           products. Currently polishing my skills/knowldege on performance

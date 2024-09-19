@@ -3,7 +3,7 @@ import {
   Contact,
   GridLayout,
   Introduction,
-  Process,
+  // Process,
   Projects,
 } from "./components";
 import Link from "next/link";

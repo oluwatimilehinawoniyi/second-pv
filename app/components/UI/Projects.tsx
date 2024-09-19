@@ -54,7 +54,7 @@ export default function Projects() {
             key={index}
             className="card flex h-auto items-start justify-between rounded-lg p-4"
           >
-            <div className="w-2/3">
+            <div className="w-3/4">
               <p className="mb-2 text-lg font-semibold capitalize">
                 {project.title}
               </p>

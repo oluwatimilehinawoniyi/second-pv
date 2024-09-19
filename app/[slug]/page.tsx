@@ -1,4 +1,4 @@
-import { Eye, Github, House } from "lucide-react";
+import { Eye, Github, Home, House } from "lucide-react";
 import { GridLayout } from "../components";
 import Navigation from "../components/common/Navigation";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <GridLayout
       leftBar={
-        <div className="flex h-full w-full flex-col items-start pl-20 pr-4 pt-20">
+        <div className="hidden h-full w-full flex-col items-start pl-20 pr-4 pt-20 lg:flex">
           <Navigation icon={<House size={16} />} title="home" to="/" />
 
           <div className="pt-10">
@@ -67,7 +67,7 @@ export default function Page() {
         </div>
       }
       rightBar={
-        <div className="flex h-full w-full flex-col items-center pt-20">
+        <div className="hidden h-full w-full flex-col items-center pt-20 lg:flex">
           <h1 className="capitalize">other projects</h1>
           <ul className="mt-4 flex flex-col gap-4">
             {projects.map(({ link, title }, index) => (
@@ -80,7 +80,13 @@ export default function Page() {
           </ul>
         </div>
       }
-      display={<div className=""></div>}
+      display={
+        <div className="relative pt-10">
+          <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
+            <Navigation to="/" title="home" icon={<Home />} />
+          </div>
+        </div>
+      }
     />
   );
 }
