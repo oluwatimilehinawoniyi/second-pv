@@ -82,6 +82,31 @@ export default function Page() {
       }
       display={
         <div className="relative pt-10">
+          <h2 className="">hello world</h2>
+          <div className="flex size-[400px] items-center justify-center bg-white p-8">
+            <svg viewBox="0 0 93.024277 93.024818" version="1.1">
+              <style>
+                {/* .favicon
+                {{
+                  fill: "red",
+                }} */}
+                {
+                  // fill: green;
+                }
+                {/* @media (prefers-color-scheme: dark) { */}
+                {/* .favicon { */}
+                {/* fill: rgb(129, 98, 65); */}
+                {/* } */}
+                {/* } */}
+              </style>
+              <g id="layer1" transform="translate(-55.571122,-108.18596)">
+                <path
+                  className="fill-[rgb(129,_98,_65)]"
+                  d="m 102.08301,108.18597 a 46.512333,46.512333 0 0 0 -46.511888,46.51241 46.512333,46.512333 0 0 0 46.511888,46.5124 46.512333,46.512333 0 0 0 46.5124,-46.5124 46.512333,46.512333 0 0 0 -46.5124,-46.51241 z m 0,14.53141 a 31.981003,31.981003 0 0 1 31.98151,31.981 31.981003,31.981003 0 0 1 -31.98151,31.98099 31.981003,31.981003 0 0 1 -31.980992,-31.98099 31.981003,31.981003 0 0 1 31.980992,-31.981 z"
+                />
+              </g>
+            </svg>
+          </div>
           <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
             <Navigation to="/" title="home" icon={<Home />} />
           </div>
