@@ -1,45 +1,7 @@
-import Link from "next/link";
 import Links from "../common/Links";
+import { projects } from "@/app/data/projects";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "vibemerge",
-      link: "",
-      details:
-        "lorem ipsum dotor sum loquitor delorum. lorem ipsum dotor sum loquitor delorum.",
-    },
-    {
-      title: "kicks",
-      link: "",
-      details:
-        "lorem ipsum dotor sum loquitor delorum. lorem ipsum dotor sum loquitor delorum.",
-    },
-    // {
-    //   title: "prism",
-    //   link: "",
-    //   details:
-    //     "lorem ipsum dotor sum loquitor delorum. lorem ipsum dotor sum loquitor delorum.",
-    // },
-    {
-      title: "CSS unit converter",
-      link: "",
-      details:
-        "lorem ipsum dotor sum loquitor delorum. lorem ipsum dotor sum loquitor delorum.",
-    },
-    {
-      title: "paladin",
-      link: "",
-      details:
-        "lorem ipsum dotor sum loquitor delorum. lorem ipsum dotor sum loquitor delorum.",
-    },
-    {
-      title: "kicks (admin dashboard)",
-      link: "",
-      details:
-        "lorem ipsum dotor sum loquitor delorum. lorem ipsum dotor sum loquitor delorum.",
-    },
-  ];
   return (
     <section className="mt-6">
       <h1 className="mb-4 text-3xl font-bold capitalize">projects</h1>

@@ -50,7 +50,7 @@ export default function Blog() {
       // }
 
       display={
-        <>
+        // <>
           <div className="relative pt-20">
             <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
               <Navigation to="/" title="home" icon={<Home />} />
@@ -88,7 +88,7 @@ export default function Blog() {
               </ul>
             </div>
           </div>
-        </>
+        // </>
       }
     />
   );
