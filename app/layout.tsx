@@ -19,7 +19,7 @@ const metadata: Metadata = {
       },
       {
         media: "(prefers-color-scheme: dark)",
-        url: "/images/icon.png",
+        url: "/images/icon-dark.png",
         href: "/images/icon-dark.png",
       },
     ],

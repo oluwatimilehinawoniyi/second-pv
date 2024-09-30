@@ -6,10 +6,9 @@ export default function Contact() {
       </h1>
       <p className="text-background">
         I&apos;ve had the privilege of collaborating with visionary founders and
-        companies across diverse industries like insurtech, e-commerce, and
-        development. While these founders bring brilliant ideas to the table,
-        turning them into digital products that resonate with users can be
-        complex.
+        companies across diverse industries like insurtech, e-commerce etc.
+        While these founders bring brilliant ideas to the table, turning them
+        into digital products that resonate with users can be complex.
       </p>
       <p className="mt-4 text-background">
         <span className="font-semibold text-brown">

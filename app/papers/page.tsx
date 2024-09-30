@@ -51,8 +51,8 @@ export default function Blog() {
 
       display={
         <>
-          <div className="pt-20 relative">
-            <div className="mb-6 lg:hidden sticky top-6 h-10 bg-background">
+          <div className="relative pt-20">
+            <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
               <Navigation to="/" title="home" icon={<Home />} />
             </div>
 
@@ -135,7 +135,7 @@ function Filter({
     <div
       onClick={() => onClick(tag)}
       key={tag}
-      className={`flex cursor-pointer items-center gap-2 rounded-full border px-4 text-sm transition-all duration-200 ease-linear ${isActive ? "border-brown bg-brown *:text-background" : "bg-transparent"}`}
+      className={`flex cursor-pointer items-center gap-2 rounded-full border border-brown px-4 text-sm transition-all duration-200 ease-linear ${isActive ? "bg-brown *:text-background" : "bg-transparent"}`}
     >
       <p className="">{tag}</p>
     </div>

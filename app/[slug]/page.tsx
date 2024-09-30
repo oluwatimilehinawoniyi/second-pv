@@ -1,7 +1,8 @@
 import { Eye, Github, Home, House } from "lucide-react";
-import { GridLayout } from "../components";
+import { Contact, GridLayout } from "../components";
 import Navigation from "../components/common/Navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   { title: "lorem ipsum", link: "#" },
@@ -81,35 +82,85 @@ export default function Page() {
         </div>
       }
       display={
-        <div className="relative pt-10">
-          <h2 className="">hello world</h2>
-          <div className="flex size-[400px] items-center justify-center bg-white p-8">
-            <svg viewBox="0 0 93.024277 93.024818" version="1.1">
-              <style>
-                {/* .favicon
-                {{
-                  fill: "red",
-                }} */}
-                {
-                  // fill: green;
-                }
-                {/* @media (prefers-color-scheme: dark) { */}
-                {/* .favicon { */}
-                {/* fill: rgb(129, 98, 65); */}
-                {/* } */}
-                {/* } */}
-              </style>
-              <g id="layer1" transform="translate(-55.571122,-108.18596)">
-                <path
-                  className="fill-[rgb(129,_98,_65)]"
-                  d="m 102.08301,108.18597 a 46.512333,46.512333 0 0 0 -46.511888,46.51241 46.512333,46.512333 0 0 0 46.511888,46.5124 46.512333,46.512333 0 0 0 46.5124,-46.5124 46.512333,46.512333 0 0 0 -46.5124,-46.51241 z m 0,14.53141 a 31.981003,31.981003 0 0 1 31.98151,31.981 31.981003,31.981003 0 0 1 -31.98151,31.98099 31.981003,31.981003 0 0 1 -31.980992,-31.98099 31.981003,31.981003 0 0 1 31.980992,-31.981 z"
-                />
-              </g>
-            </svg>
-          </div>
-          <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
+        <div className="relative flex flex-col gap-8 pt-20">
+          {/* <div className="sticky z-50 top-6 mb-6 h-10 bg-background lg:hidden">
             <Navigation to="/" title="home" icon={<Home />} />
+          </div> */}
+
+          <h1 className="text-3xl font-bold capitalize">lorem ipsum</h1>
+
+          <p className="text-justify">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+            assumenda quidem accusamus adipisci beatae incidunt, deleniti,
+            blanditiis repellat deserunt molestias impedit, nemo laudantium cum
+            autem aliquid? Magnam voluptatum voluptate cum error quam possimus.
+            Dolor, rem itaque quaerat ducimus exercitationem nemo quidem quis!
+            Quibusdam provident tempora neque, nemo nesciunt assumenda omnis?
+          </p>
+
+          <div className="relative h-[350px] w-full">
+            <Image
+              src={"/images/placeholder.jpg"}
+              alt="placeholder"
+              fill
+              className="object-cover"
+            />
           </div>
+
+          <div className="">
+            <h2 className="mb-2 text-2xl font-bold capitalize">
+              project purpose
+            </h2>
+            <p className="text-justify">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+              assumenda quidem accusamus adipisci beatae incidunt, deleniti,
+              blanditiis repellat deserunt molestias impedit, nemo laudantium
+              cum autem aliquid? Magnam voluptatum voluptate cum error quam
+              possimus. Dolor, rem itaque quaerat ducimus exercitationem nemo
+              quidem quis! Quibusdam provident tempora neque, nemo nesciunt
+              assumenda omnis?
+            </p>
+          </div>
+          <div className="">
+            <h2 className="mb-2 text-2xl font-bold capitalize">
+              web stack explanation
+            </h2>
+            <p className="text-justify">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+              assumenda quidem accusamus adipisci beatae incidunt, deleniti,
+              blanditiis repellat deserunt molestias impedit, nemo laudantium
+              cum autem aliquid? Magnam voluptatum voluptate cum error quam
+              possimus. Dolor, rem itaque quaerat ducimus exercitationem nemo
+              quidem quis! Quibusdam provident tempora neque, nemo nesciunt
+              assumenda omnis?
+            </p>
+          </div>
+
+          <div className="relative h-[350px] w-full">
+            <Image
+              src={"/images/placeholder.jpg"}
+              alt="placeholder"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div className="">
+            <h2 className="mb-2 text-2xl font-bold capitalize">
+              problems and lessons
+            </h2>
+            <p className="text-justify">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+              assumenda quidem accusamus adipisci beatae incidunt, deleniti,
+              blanditiis repellat deserunt molestias impedit, nemo laudantium
+              cum autem aliquid? Magnam voluptatum voluptate cum error quam
+              possimus. Dolor, rem itaque quaerat ducimus exercitationem nemo
+              quidem quis! Quibusdam provident tempora neque, nemo nesciunt
+              assumenda omnis?
+            </p>
+          </div>
+
+          <Contact />
         </div>
       }
     />

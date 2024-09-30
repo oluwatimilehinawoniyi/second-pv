@@ -13,6 +13,11 @@ export default function Footer() {
 
         <ul className="flex items-center gap-4">
           <li>
+            <Links icon={false} to="/">
+              home
+            </Links>
+          </li>
+          <li>
             <Links icon={false} to="/papers">
               blog
             </Links>
