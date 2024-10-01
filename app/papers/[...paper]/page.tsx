@@ -27,8 +27,6 @@ export async function generateMetadata({
     )
     .join(" ");
 
-  console.log(formattedTitle);
-
   return {
     title: formattedTitle,
     description: `Read about ${formattedTitle}`,
