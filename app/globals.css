@@ -1,3 +1,4 @@
+@import "prismjs/themes/prism-tomorrow.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -123,5 +124,89 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+.prose {
+  text-align: justify;
+  padding-bottom: 2rem;
+}
+
+.prose pre {
+  padding: 1rem;
+  background: rgb(var(--foreground-rgb));
+  border-radius: 0.5rem;
+  margin-block: 1.5rem;
+  overflow-x: auto;
+}
+
+.prose code {
+  font-family: "Fira Code", monospace;
+}
+
+[data-theme="dark"] .prose pre {
+  background: #222222;
+}
+
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.prose h2 {
+  font-size: 2rem;
+}
+
+.prose h3 {
+  font-size: 1.75rem;
+}
+
+.prose h4 {
+  font-size: 1.5rem;
+}
+
+.prose h5 {
+  font-size: 1.25rem;
+}
+
+.prose h6 {
+  font-size: 1rem;
+}
+
+.prose ul,
+.prose ol {
+  margin-block: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prose strong {
+  color: rgb(var(--brown));
+}
+
+@media (max-width: 768px) {
+  .prose h2 {
+    font-size: 1.75rem;
+  }
+
+  .prose h3 {
+    font-size: 1.5rem;
+  }
+
+  .prose h4 {
+    font-size: 1.25rem;
+  }
+
+  .prose h5 {
+    font-size: 1.125rem;
+  }
+
+  .prose h6 {
+    font-size: 0.9rem;
   }
 }
