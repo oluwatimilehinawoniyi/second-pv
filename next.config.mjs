@@ -6,10 +6,11 @@ const nextConfig = {
 };
 
 const withMDX = createMDX({
-  //   options: {
-  //     remarkPlugins: [],
-  //     rehypePlugins: [],
-  //   },
+    options: {
+      remarkPlugins: [],
+      rehypePlugins: [],
+    },
+  extension: /\.mdx?$/,
 });
 
 export default withMDX(nextConfig);

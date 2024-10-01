@@ -31,8 +31,6 @@ export async function GET() {
     const { data } = matter(fileContent);
     const { date, tag, title } = data;
 
-    console.log(data);
-    
     return {
       title,
       id: slug,
