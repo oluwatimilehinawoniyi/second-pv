@@ -6,15 +6,28 @@ import Image from "next/image";
 import Links from "../components/common/Links";
 import { projects } from "@/app/data/projects";
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "next";
 
-export default function Page({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const projectTitle = params.slug;
+
+  return {
+    title: projectTitle.toLocaleUpperCase(),
+    description: `Read about ${projectTitle}`,
+  };
+}
+
+export default function Page() {
   return (
     <>
-      <Head>
-        <title>{params.slug}</title>
-        <meta name="description" content={`Read more about ${params.slug}`} />
-      </Head>
       <GridLayout
         leftBar={
           <div className="hidden h-full w-full flex-col items-start pl-20 pr-4 pt-20 lg:flex">

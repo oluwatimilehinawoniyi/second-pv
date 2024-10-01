@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider, useTheme } from "next-themes";
-
 const manrope = Manrope({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["latin"] });
 

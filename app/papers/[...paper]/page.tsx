@@ -7,10 +7,28 @@ import Navigation from "@/app/components/common/Navigation";
 import { FileStack } from "lucide-react";
 import React from "react";
 import Head from "next/head";
+import { Metadata } from "next";
+
+interface PageProps {
+  params: {
+    paper: string;
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const paper = params.paper[0];
+  const formattedTitle = paper.replaceAll("-", " ").toLocaleUpperCase();
+
+  return {
+    title: formattedTitle,
+    description: `Read about ${formattedTitle}`,
+  };
+}
 
 export default function Page({ params }: { params: { paper: string[] } }) {
   const slug = params.paper.join("/");
-  console.log(slug);
 
   const mdxPath = path.join(
     process.cwd(),

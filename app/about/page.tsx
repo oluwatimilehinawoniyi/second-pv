@@ -2,11 +2,16 @@ import { House } from "lucide-react";
 import { GridLayout } from "../components";
 import Navigation from "../components/common/Navigation";
 
+export const metadata = {
+  title: "About Oluwatimilehin",
+  description: "Hey, I have been in this world for a while, know me!",
+};
+
 export default function page() {
   return (
     <GridLayout
       leftBar={
-        <div className="flex h-full w-full flex-col items-center pt-20">
+        <div className="hidden h-full w-full flex-col items-center pt-20 lg:flex">
           <Navigation icon={<House size={16} />} title="home" to="/" />
         </div>
       }
