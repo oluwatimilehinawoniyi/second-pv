@@ -19,7 +19,15 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const paper = params.paper[0];
-  const formattedTitle = paper.replaceAll("-", " ").toLocaleUpperCase();
+  const formattedTitle = paper
+    .split("-")
+    .map(
+      (word) =>
+        word.charAt(0).toLocaleUpperCase() + word.slice(1).toLowerCase(),
+    )
+    .join(" ");
+
+  console.log(formattedTitle);
 
   return {
     title: formattedTitle,

@@ -17,10 +17,16 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const projectTitle = params.slug;
+  const projectTitle = params.slug
+    .split("-")
+    .map(
+      (word) =>
+        word.charAt(0).toLocaleUpperCase() + word.slice(1).toLowerCase(),
+    )
+    .join(" ");
 
   return {
-    title: projectTitle.toLocaleUpperCase(),
+    title: projectTitle,
     description: `Read about ${projectTitle}`,
   };
 }
