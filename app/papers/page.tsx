@@ -1,15 +1,18 @@
 "use client";
-import { Dot, Home, House } from "lucide-react";
-import { GridLayout } from "../components";
+import { Home, House } from "lucide-react";
+import { GridLayout } from "@/app/components";
 import Navigation from "@/app/components/common/Navigation";
-import Link from "next/link";
-import { papers } from "../data/papers";
+import PaperList from "./PaperList";
+import usePapers from "../hooks/usePapers";
 import { useState } from "react";
+// import { getPapers } from "@/app/utils/getPapers";
 
-export default function Blog() {
+export default function Blog({ params }: { params: { paper: string } }) {
   const [selectedFilters, setSelectedFilters] = useState<string[]>(["all"]);
 
-  const filters = Array.from(new Set(papers.map((item) => item.tag)));
+  const { papers, loading } = usePapers();
+
+  const filters = papers.map((item) => item.tag);
 
   const handleSelected = (tag: string) => {
     if (tag === "all") {
@@ -50,45 +53,29 @@ export default function Blog() {
       // }
 
       display={
-        // <>
-          <div className="relative pt-20">
-            <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
-              <Navigation to="/" title="home" icon={<Home />} />
-            </div>
-
-            <h1 className="mb-6 text-justify text-3xl font-bold capitalize">
-              Papers
-            </h1>
-            <p className="text-justify">
-              My introversion and curiosity often lead me to put pen to paper.
-              Over time, I&apos;ve tried to be more technical in my writing,
-              though I sometimes find myself drifting into a playful tone. I aim
-              to make complex concepts more relatable by comparing them to
-              everyday experiences. I hope you enjoy my{" "}
-              <i className="blur-[1px]">technical</i> writings.
-            </p>
-
-            <div className="mt-12">
-              <ul className="paper-list">
-                {filteredPapers.map(({ id, title, date, slug, tag }) => (
-                  <li key={id} className="paper border-b border-foreground">
-                    <Link
-                      href={`/papers/${slug}`}
-                      className="flex items-center justify-between py-4"
-                    >
-                      <p className="">{title}</p>
-                      <span className="flex items-center">
-                        <p className="text-sm text-brown">{tag}</p>
-                        <Dot />
-                        <p className="text-sm">{date}</p>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="relative pt-20">
+          <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
+            <Navigation to="/" title="home" icon={<Home />} />
           </div>
-        // </>
+          <h1 className="mb-6 text-justify text-3xl font-bold capitalize">
+            Papers
+          </h1>
+          <p className="text-justify">
+            My introversion and curiosity often lead me to put pen to paper.
+            Over time, I&apos;ve tried to be more technical in my writing,
+            though I sometimes find myself drifting into a playful tone. I aim
+            to make complex concepts more relatable by comparing them to
+            everyday experiences. I hope you enjoy my{" "}
+            <i className="blur-[1px]">technical</i> writings.
+          </p>
+          {loading ? (
+            <div className="mt-12">
+              <p>fetching papers...</p>
+            </div>
+          ) : (
+            <PaperList filteredPapers={filteredPapers} />
+          )}
+        </div>
       }
     />
   );

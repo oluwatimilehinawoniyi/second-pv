@@ -10,10 +10,16 @@
     "clear-cache": "rm -rf .next && npm run dev"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.13",
+    "@types/mdx": "^2.0.13",
     "@wavesurfer/react": "^1.0.7",
     "framer-motion": "^11.3.21",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.424.0",
     "next": "14.2.5",
+    "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
