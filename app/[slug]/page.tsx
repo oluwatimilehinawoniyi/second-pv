@@ -63,7 +63,7 @@ export default function Page() {
         </div>
       }
       rightBar={
-        <div className="hidden h-full w-full flex-col items-left pt-20 pl-20 lg:flex">
+        <div className="items-left hidden h-full w-full flex-col pl-20 pt-20 lg:flex">
           <h1 className="capitalize">other projects</h1>
           <ul className="mt-4 flex flex-col gap-4">
             {projects.map(({ link, title }, index) => (
