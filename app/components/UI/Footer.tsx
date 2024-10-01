@@ -5,7 +5,7 @@ import Links from "../common/Links";
 
 export default function Footer() {
   return (
-    <footer className="footer fixed bottom-0 z-50 flex h-10 w-full items-center justify-center bg-[rgb(var(--background-rgb))]">
+    <footer className="footer fixed bottom-0 z-50 flex h-14 w-full items-center justify-center bg-[rgb(var(--background-rgb))] md:h-10">
       <div className="mx-auto flex w-full max-w-[700px] items-center justify-between px-4 text-sm font-thin md:px-0 lg:max-w-[800px]">
         <div className="flex items-center gap-4">
           <TimeDisplay /> | <ThemeToggle />

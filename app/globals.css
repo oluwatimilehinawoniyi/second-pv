@@ -126,6 +126,7 @@
     text-wrap: balance;
   }
 }
+
 .prose {
   text-align: justify;
   padding-bottom: 2rem;
@@ -190,20 +191,24 @@
 }
 
 @media (max-width: 768px) {
-  .prose h2 {
-    font-size: 1.75rem;
+  .prose {
+    text-align: left;
   }
 
-  .prose h3 {
+  .prose h2 {
     font-size: 1.5rem;
   }
 
+  .prose h3 {
+    font-size: 1.3rem;
+  }
+
   .prose h4 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .prose h5 {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .prose h6 {
