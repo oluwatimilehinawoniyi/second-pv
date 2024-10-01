@@ -1,8 +1,7 @@
 "use client";
 import { Dot } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
-import usePapers from "../hooks/usePapers";
+import React from "react";
 
 export default function PaperList({
   filteredPapers,
@@ -15,15 +14,6 @@ export default function PaperList({
     tag: string;
   }[];
 }) {
-  //   const { papers, loading } = usePapers();
-
-  //   const [selectedFilters, setSelectedFilters] = useState<string[]>(["all"]);
-
-  //   const filteredPapers = selectedFilters.includes("all")
-  //     ? papers
-  //     : papers.filter((paper) => selectedFilters.includes(paper.tag));
-
-  //   if (loading) return <p>Loading...</p>;
 
   return (
     <div className="mt-12">

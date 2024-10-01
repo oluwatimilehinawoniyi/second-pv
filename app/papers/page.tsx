@@ -5,9 +5,9 @@ import Navigation from "@/app/components/common/Navigation";
 import PaperList from "./PaperList";
 import usePapers from "../hooks/usePapers";
 import { useState } from "react";
-// import { getPapers } from "@/app/utils/getPapers";
+import PaperFilter from "../components/UI/PaperFilter";
 
-export default function Blog({ params }: { params: { paper: string } }) {
+export default function Blog() {
   const [selectedFilters, setSelectedFilters] = useState<string[]>(["all"]);
 
   const { papers, loading } = usePapers();
@@ -46,12 +46,6 @@ export default function Blog({ params }: { params: { paper: string } }) {
           />
         </div>
       }
-      // rightBar={
-      //   <div className="flex h-full w-auto flex-col items-center pt-20">
-      //     <Navigation icon={<House size={16} />} title="home" to="/" />
-      //   </div>
-      // }
-
       display={
         <div className="relative pt-20">
           <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
@@ -78,53 +72,5 @@ export default function Blog({ params }: { params: { paper: string } }) {
         </div>
       }
     />
-  );
-}
-
-function PaperFilter({
-  filters,
-  selectedFilters,
-  onHandleSelectedFilters,
-}: {
-  filters: string[];
-  selectedFilters: string[];
-  onHandleSelectedFilters: (tag: string) => void;
-}) {
-  return (
-    <div className="mt-12">
-      <h1 className="capitalize">filter</h1>
-      <div className="mt-4 flex flex-wrap gap-4">
-        {["all", ...filters].map((tag, index) => (
-          <Filter
-            selectedFilters={selectedFilters}
-            tag={tag}
-            key={index}
-            onClick={onHandleSelectedFilters}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function Filter({
-  tag,
-  onClick,
-  selectedFilters,
-}: {
-  tag: string;
-  onClick: (tag: string) => void;
-  selectedFilters: string[];
-}) {
-  const isActive = selectedFilters.includes(tag);
-
-  return (
-    <div
-      onClick={() => onClick(tag)}
-      key={tag}
-      className={`flex cursor-pointer items-center gap-2 rounded-full border border-brown px-4 text-sm transition-all duration-200 ease-linear ${isActive ? "bg-brown *:text-background" : "bg-transparent"}`}
-    >
-      <p className="">{tag}</p>
-    </div>
   );
 }

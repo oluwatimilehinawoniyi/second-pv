@@ -25,7 +25,6 @@
 }
 
 * {
-  /* border: 1px solid red; */
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--footer-border)) transparent;
 }
@@ -43,12 +42,10 @@
 
   .intro {
     @media screen and (min-width: 768px) {
-      /* height: 75vh; */
       padding-top: 160px;
     }
   }
 
-  /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
   .footer {
     box-shadow: 0px 1px 2px rgb(var(--foreground-rgb));
   }
@@ -68,12 +65,6 @@
   .paper-list:hover .paper:is(:not(.paper:hover)) {
     opacity: 0.3;
   }
-
-  /* .paper-list:first-of-type { } */
-
-  /* h1 {
-    color: rgb(var(--foreground-text));
-  } */
 
   h1,
   h2,

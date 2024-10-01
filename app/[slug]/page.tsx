@@ -1,4 +1,4 @@
-import { Eye, Github, Home, House } from "lucide-react";
+import { Eye, Github, House } from "lucide-react";
 import { Contact, GridLayout } from "../components";
 import Navigation from "../components/common/Navigation";
 import Link from "next/link";
@@ -78,10 +78,6 @@ export default function Page() {
       }
       display={
         <div className="relative flex flex-col gap-8 pt-20">
-          {/* <div className="sticky z-50 top-6 mb-6 h-10 bg-background lg:hidden">
-            <Navigation to="/" title="home" icon={<Home />} />
-          </div> */}
-
           <h1 className="text-3xl font-bold capitalize">lorem ipsum</h1>
 
           <p className="text-justify">
