@@ -24,7 +24,7 @@ export default function Projects() {
               </p>
               <p className="text-sm md:text-base">{project.details}</p>
             </div>
-            <Links to={project.link}>project details</Links>
+            <Links to={project.slug}>project details</Links>
           </div>
         ))}
       </div>

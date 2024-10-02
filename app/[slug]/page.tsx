@@ -31,7 +31,16 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
+export default function Page({ params }: { params: { slug: string } }) {
+  const otherProjects = projects.filter(
+    (project) => project.slug.slice(1) !== params.slug,
+  );
+  const currentProject = projects.filter(
+    (project) => project.slug.slice(1) === params.slug,
+  );
+
+  console.log(Object.keys(currentProject[0]));
+  const { title, category, details, link, slug, stack } = currentProject[0];
   return (
     <>
       <GridLayout
@@ -41,51 +50,37 @@ export default function Page() {
 
             <div className="pt-10">
               <ul className="flex flex-col gap-4">
-                {[
-                  { item: "title", value: "vibemerge" },
-                  { item: "category", value: "fullstack app" },
-                  { item: "role", value: "developer, designer" },
-                  { item: "stacks", value: "react, node/expressJS" },
-                  {
-                    item: "links",
-                    value: [
-                      {
-                        title: "github",
-                        icon: <Github size={16} />,
-                        link: "#",
-                      },
-                      {
-                        title: "live site",
-                        icon: <Eye size={16} />,
-                        link: "#",
-                      },
-                    ],
-                  },
-                ].map((list) => {
-                  if (!Array.isArray(list.value)) {
-                    return (
-                      <li key={list.item} className="">
-                        <h1 className="capitalize">{list.item}:</h1>
-                        <p className="capitalize">{list.value}</p>
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li key={list.item} className="">
-                        <h1 className="mb-1 capitalize">{list.item}:</h1>
-                        {list.value.map((item, index) => (
-                          <Link
-                            href={""}
-                            target="_blank"
-                            className="mb-2 flex items-center gap-2 capitalize hover:underline"
-                            key={index}
-                          >
-                            {item.icon}
-                            <p>{item.title}</p>
-                          </Link>
-                        ))}
-                      </li>
-                    );
+                {Object.keys(currentProject[0]).map((key) => {
+                  if (
+                    key === "title" ||
+                    key === "stack" ||
+                    key === "category" ||
+                    key === "link"
+                  ) {
+                    if (!Array.isArray(currentProject[0][key])) {
+                      return (
+                        <li key={key} className="">
+                          <h1 className="capitalize">{key}:</h1>
+                          <p className="capitalize">{currentProject[0][key]}</p>
+                        </li>
+                      );
+                    } else {
+                      return (
+                        <li key={key} className="">
+                          <h1 className="mb-1 capitalize">{key}:</h1>
+                          {currentProject[0][key].map((item) => (
+                            <Link
+                              href={item.link}
+                              target="_blank"
+                              className="mb-2 flex items-center gap-2 capitalize underline underline-offset-2"
+                              key={item.title}
+                            >
+                              <p>{item.title}</p>
+                            </Link>
+                          ))}
+                        </li>
+                      );
+                    }
                   }
                 })}
               </ul>
@@ -96,9 +91,9 @@ export default function Page() {
           <div className="items-left hidden h-full w-full flex-col pl-20 pt-20 lg:flex">
             <h1 className="capitalize">other projects</h1>
             <ul className="mt-4 flex flex-col gap-4">
-              {projects.map(({ link, title }, index) => (
+              {otherProjects.map(({ slug, title }, index) => (
                 <li key={index} className="capitalize hover:underline">
-                  <Link href={link}>
+                  <Link href={slug}>
                     <p>{title}</p>
                   </Link>
                 </li>
@@ -109,7 +104,7 @@ export default function Page() {
         display={
           <div className="relative flex flex-col gap-8 pb-4 pt-20">
             <h1 className="text-2xl font-bold capitalize md:text-3xl">
-              lorem ipsum
+              {title}
             </h1>
 
             <p className="md:text-justify">
@@ -123,48 +118,37 @@ export default function Page() {
             </p>
 
             <ul className="grid grid-cols-2 gap-4 lg:hidden">
-              {[
-                { item: "category", value: "fullstack app" },
-                { item: "role", value: "developer, designer" },
-                { item: "stacks", value: "react, node/expressJS" },
-                {
-                  item: "links",
-                  value: [
-                    {
-                      title: "github",
-                      icon: <Github size={16} />,
-                      link: "#",
-                    },
-                    { title: "live site", icon: <Eye size={16} />, link: "#" },
-                  ],
-                },
-              ].map((list) => {
-                if (!Array.isArray(list.value)) {
-                  return (
-                    <li key={list.item} className="">
-                      <h1 className="capitalize">{list.item}:</h1>
-                      <p className="capitalize">{list.value}</p>
-                    </li>
-                  );
-                } else {
-                  return (
-                    <li key={list.item} className="">
-                      <h1 className="mb-1 capitalize">{list.item}:</h1>
-                      <span className="flex flex-wrap items-center gap-3 md:gap-4">
-                        {list.value.map((item, index) => (
+              {Object.keys(currentProject[0]).map((key) => {
+                if (
+                  key === "title" ||
+                  key === "stack" ||
+                  key === "category" ||
+                  key === "link"
+                ) {
+                  if (!Array.isArray(currentProject[0][key])) {
+                    return (
+                      <li key={key} className="">
+                        <h1 className="capitalize">{key}:</h1>
+                        <p className="capitalize">{currentProject[0][key]}</p>
+                      </li>
+                    );
+                  } else {
+                    return (
+                      <li key={key} className="">
+                        <h1 className="mb-1 capitalize">{key}:</h1>
+                        {currentProject[0][key].map((item) => (
                           <Link
-                            href={""}
+                            href={item.link}
                             target="_blank"
                             className="mb-2 flex items-center gap-2 capitalize underline underline-offset-2"
-                            key={index}
+                            key={item.title}
                           >
-                            {item.icon}
                             <p>{item.title}</p>
                           </Link>
                         ))}
-                      </span>
-                    </li>
-                  );
+                      </li>
+                    );
+                  }
                 }
               })}
             </ul>
@@ -235,7 +219,7 @@ export default function Page() {
               <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
                 other projects
               </h2>
-              {projects.map((project, index) => (
+              {otherProjects.map((project, index) => (
                 <div
                   key={index}
                   className="card flex h-auto flex-col items-start justify-between gap-4 rounded-lg p-4 md:flex-row"
@@ -246,7 +230,7 @@ export default function Page() {
                     </p>
                     <p className="text-sm md:text-base">{project.details}</p>
                   </div>
-                  <Links to={project.link}>project details</Links>
+                  <Links to={project.slug}>project details</Links>
                 </div>
               ))}
             </div>
