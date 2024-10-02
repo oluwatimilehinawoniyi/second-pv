@@ -95,7 +95,7 @@ export default function Page({ params }: { params: { paper: string[] } }) {
         display={
           <div className="relative pt-20">
             <article className="prose">
-              <h1 className="mb-4 text-2xl md:text-3xl font-bold capitalize">
+              <h1 className="mb-4 text-2xl font-bold capitalize md:text-3xl">
                 {data.title}
               </h1>
               <MDXRemote

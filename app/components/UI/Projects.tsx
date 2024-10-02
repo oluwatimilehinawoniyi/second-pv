@@ -4,7 +4,9 @@ import { projects } from "@/app/data/projects";
 export default function Projects() {
   return (
     <section className="mt-6">
-      <h1 className="mb-4 text-3xl font-bold capitalize">projects</h1>
+      <h1 className="mb-4 text-2xl font-bold capitalize md:text-3xl">
+        projects
+      </h1>
       <p className="">
         These are a reflection of either the need to apply some knowledge or
         gut-based-eureka-moment-ideas to a perceived need. I simply love to have

@@ -8,7 +8,7 @@ export default function Papers() {
   const { papers } = usePapers();
   return (
     <section className="mb-4 mt-8">
-      <h1 className="mb-6 text-3xl font-bold capitalize">Papers</h1>
+      <h1 className="mb-6 text-2xl md:text-3xl font-bold capitalize">Papers</h1>
       <p>
         My introversion and curiosity often lead me to put pen to paper. Over
         time, I&apos;ve tried to be more technical in my writing, though I

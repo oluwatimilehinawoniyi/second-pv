@@ -6,8 +6,9 @@ tag: "tech"
 slug: My First Blog Post
 ---
 
-Welcome to my first blog post. Here's some **MDX** content!
+Welcome to my first blog post. Here's some MDX content!
 
 ```tsx
-const CodeExample = () => <div>Hello, this is a code block!</div>;
+const CodeExample = () =>
+    <div>Hello, this is a code block!</div>;
 ```
