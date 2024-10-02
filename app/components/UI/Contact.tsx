@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section className="rounded-lg bg-foreground p-4">
-      <h1 className="mb-4 text-3xl font-bold capitalize text-background">
+      <h1 className="mb-4 text-2xl font-bold capitalize text-background md:text-3xl">
         Contact
       </h1>
       <p className="text-background">

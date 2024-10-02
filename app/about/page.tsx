@@ -1,5 +1,5 @@
 import { House } from "lucide-react";
-import { GridLayout } from "../components";
+import { Contact, GridLayout } from "../components";
 import Navigation from "../components/common/Navigation";
 
 export const metadata = {
@@ -16,9 +16,9 @@ export default function page() {
         </div>
       }
       display={
-        <div className="pt-20">
+        <div className="pb-4 pt-20">
           <h1 className="mb-4 text-3xl font-bold">Hi there!</h1>
-          <p>
+          <p className="mb-8">
             My grandpa always believed I’d do something in science because I was
             a curious kid. I was the one opening up toys to see who was
             “speaking” inside, connecting rotors and batteries, trying to build
@@ -62,6 +62,7 @@ export default function page() {
             on this journey. Let’s connect—drop me a message, and I’ll get back
             to you as soon as I can!
           </p>
+          <Contact />
         </div>
       }
     />

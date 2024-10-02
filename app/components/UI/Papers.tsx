@@ -28,13 +28,13 @@ export default function Papers() {
               >
                 <Link
                   href={`/papers/${slug}`}
-                  className="flex items-center justify-between py-4"
+                  className="items-cente flex flex-col justify-between gap-2 py-4 md:flex-row"
                 >
                   <p className="">{title}</p>
                   <span className="flex items-center">
-                    <p className="text-sm text-brown">{tag}</p>
+                    <p className="text-xs text-brown md:text-sm">{tag}</p>
                     <Dot />
-                    <p className="text-sm">{date}</p>
+                    <p className="text-xs md:text-sm">{date}</p>
                   </span>
                 </Link>
               </li>

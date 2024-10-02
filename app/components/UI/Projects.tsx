@@ -14,13 +14,13 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="card flex h-auto items-start justify-between rounded-lg p-4"
+            className="card flex h-auto flex-col items-start justify-between gap-4 rounded-lg p-4 md:flex-row"
           >
-            <div className="w-3/4">
+            <div className="w-full md:w-3/4">
               <p className="mb-2 text-lg font-semibold capitalize">
                 {project.title}
               </p>
-              <p>{project.details}</p>
+              <p className="text-sm md:text-base">{project.details}</p>
             </div>
             <Links to={project.link}>project details</Links>
           </div>

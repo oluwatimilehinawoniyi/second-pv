@@ -49,13 +49,10 @@ export default function PaperPage() {
       }
       display={
         <div className="relative pt-20">
-          <div className="sticky top-6 mb-6 h-10 bg-background lg:hidden">
-            <Navigation to="/" title="home" icon={<Home />} />
-          </div>
-          <h1 className="mb-6 text-justify text-3xl font-bold capitalize">
+          <h1 className="mb-6 text-justify text-2xl font-bold capitalize md:text-3xl">
             Papers
           </h1>
-          <p className="text-justify">
+          <p className="md:text-justify">
             My introversion and curiosity often lead me to put pen to paper.
             Over time, I&apos;ve tried to be more technical in my writing,
             though I sometimes find myself drifting into a playful tone. I aim

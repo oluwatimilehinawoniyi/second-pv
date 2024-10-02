@@ -12,12 +12,12 @@ export default function Home() {
     <>
       <GridLayout
         display={
-          <>
+          <div className="flex flex-col gap-4 pt-40 md:gap-8 md:pt-0">
             <Introduction />
             <Projects />
             <Papers />
             <Contact />
-          </>
+          </div>
         }
       />
     </>

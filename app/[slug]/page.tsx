@@ -107,10 +107,12 @@ export default function Page() {
           </div>
         }
         display={
-          <div className="relative flex flex-col gap-8 pt-20">
-            <h1 className="text-3xl font-bold capitalize">lorem ipsum</h1>
+          <div className="relative flex flex-col gap-8 pb-4 pt-20">
+            <h1 className="text-2xl font-bold capitalize md:text-3xl">
+              lorem ipsum
+            </h1>
 
-            <p className="text-justify">
+            <p className="md:text-justify">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
               assumenda quidem accusamus adipisci beatae incidunt, deleniti,
               blanditiis repellat deserunt molestias impedit, nemo laudantium
@@ -148,17 +150,19 @@ export default function Page() {
                   return (
                     <li key={list.item} className="">
                       <h1 className="mb-1 capitalize">{list.item}:</h1>
-                      {list.value.map((item, index) => (
-                        <Link
-                          href={""}
-                          target="_blank"
-                          className="mb-2 flex items-center gap-2 capitalize hover:underline"
-                          key={index}
-                        >
-                          {item.icon}
-                          <p>{item.title}</p>
-                        </Link>
-                      ))}
+                      <span className="flex flex-wrap items-center gap-3 md:gap-4">
+                        {list.value.map((item, index) => (
+                          <Link
+                            href={""}
+                            target="_blank"
+                            className="mb-2 flex items-center gap-2 capitalize underline underline-offset-2"
+                            key={index}
+                          >
+                            {item.icon}
+                            <p>{item.title}</p>
+                          </Link>
+                        ))}
+                      </span>
                     </li>
                   );
                 }
@@ -175,10 +179,10 @@ export default function Page() {
             </div>
 
             <div className="">
-              <h2 className="mb-2 text-2xl font-bold capitalize">
+              <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
                 project purpose
               </h2>
-              <p className="text-justify">
+              <p className="md:text-justify">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
                 assumenda quidem accusamus adipisci beatae incidunt, deleniti,
                 blanditiis repellat deserunt molestias impedit, nemo laudantium
@@ -189,10 +193,10 @@ export default function Page() {
               </p>
             </div>
             <div className="">
-              <h2 className="mb-2 text-2xl font-bold capitalize">
+              <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
                 web stack explanation
               </h2>
-              <p className="text-justify">
+              <p className="md:text-justify">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
                 assumenda quidem accusamus adipisci beatae incidunt, deleniti,
                 blanditiis repellat deserunt molestias impedit, nemo laudantium
@@ -213,10 +217,10 @@ export default function Page() {
             </div>
 
             <div className="">
-              <h2 className="mb-2 text-2xl font-bold capitalize">
+              <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
                 problems and lessons
               </h2>
-              <p className="text-justify">
+              <p className="md:text-justify">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
                 assumenda quidem accusamus adipisci beatae incidunt, deleniti,
                 blanditiis repellat deserunt molestias impedit, nemo laudantium
@@ -228,16 +232,19 @@ export default function Page() {
             </div>
 
             <div className="gri gridcols-[repeat(auto-fit,minmax(280px,1fr))] flex flex-col gap-4 border-t border-footer-border pt-8 md:gap-4">
+              <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
+                other projects
+              </h2>
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="card flex h-auto items-start justify-between rounded-lg p-4"
+                  className="card flex h-auto flex-col items-start justify-between gap-4 rounded-lg p-4 md:flex-row"
                 >
-                  <div className="w-3/4">
+                  <div className="w-full md:w-3/4">
                     <p className="mb-2 text-lg font-semibold capitalize">
                       {project.title}
                     </p>
-                    <p>{project.details}</p>
+                    <p className="text-sm md:text-base">{project.details}</p>
                   </div>
                   <Links to={project.link}>project details</Links>
                 </div>

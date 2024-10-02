@@ -19,7 +19,7 @@ export default function GridLayout({
       <section className="left sticky top-0 hidden md:block lg:h-screen">
         {leftBar}
       </section>
-      <section className="mx-auto flex size-full flex-col gap-8 px-4 pb-14 pt-8 md:px-0 md:pt-0">
+      <section className="mx-auto size-full px-4 pb-14 pt8 md:px-0 md:pt-0">
         {display}
       </section>
       <section className="right sticky top-0 hidden md:block lg:h-screen">
