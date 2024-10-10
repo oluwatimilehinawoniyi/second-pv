@@ -8,6 +8,8 @@ import { useState } from "react";
 import PaperFilter from "./PaperFilter";
 import React from "react";
 
+const PUBLISH = false
+
 export default function PaperPage() {
   const [selectedFilters, setSelectedFilters] = useState<string[]>(["all"]);
 
@@ -40,11 +42,13 @@ export default function PaperPage() {
       leftBar={
         <div className="hidden h-full w-full flex-col items-start pl-20 pr-8 pt-20 lg:flex">
           <Navigation icon={<House size={16} />} title="home" to="/" />
-          <PaperFilter
-            filters={filters}
-            selectedFilters={selectedFilters}
-            onHandleSelectedFilters={handleSelected}
-          />
+          {PUBLISH &&
+            <PaperFilter
+              filters={filters}
+              selectedFilters={selectedFilters}
+              onHandleSelectedFilters={handleSelected}
+            />
+          }
         </div>
       }
       display={
@@ -60,13 +64,19 @@ export default function PaperPage() {
             everyday experiences. I hope you enjoy my{" "}
             <i className="blur-[1px]">technical</i> writings.
           </p>
-          {loading ? (
-            <div className="mt-12">
-              <p>fetching papers...</p>
-            </div>
-          ) : (
-            <PaperList filteredPapers={filteredPapers} />
-          )}
+          {
+            PUBLISH ? (
+              loading ? (
+                <div className="mt-12" >
+                  <p>fetching papers...</p>
+                </div>
+              ) : (
+                <PaperList filteredPapers={filteredPapers} />
+              )
+            ) : (<p className="mt-20">Currently a WIP (work in progress)... stay tuned 🛠️🚧
+            </p>)
+          }
+
         </div>
       }
     />

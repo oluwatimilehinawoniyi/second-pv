@@ -7,6 +7,9 @@ export const metadata = {
   description: "Welcome to the portfolio of Oluwatimilehin Awoniyi",
 };
 
+const PUBLISH = false
+
+
 export default function Home() {
   return (
     <>
@@ -15,7 +18,10 @@ export default function Home() {
           <div className="flex flex-col gap-4 pt-40 md:gap-8 md:pt-0">
             <Introduction />
             <Projects />
-            <Papers />
+            {
+              PUBLISH &&
+              <Papers />
+            }
             <Contact />
           </div>
         }

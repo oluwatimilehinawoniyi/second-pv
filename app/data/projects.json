@@ -1,0 +1,76 @@
+[
+  {
+    "id": 3,
+    "image": [
+      "/images/hermes.png",
+      "/images/Hermes.png",
+      "/images/Hermes1.png"
+    ],
+    "title": "Hermes Logistics",
+    "slug": "/hermes-logistics",
+    "category": "Fullstack Application",
+    "stack": "Next.js (TypeScript), Supabase, PostgreSQL",
+    "details": "An efficient platform designed to streamline logistics management. It also handles taking in orders, setting delivery routes and tracking. The platform offers a complete suite of logistics services including storage and tracking of parcels.",
+    "purpose": "The goal of Hermes Logistics is to create a seamless and efficient system for managing all aspects of logistics operations. This includes storage, handling, transportation, and expedited deliveries. By simplifying these processes, it ensures that deliveries are completed on time, and customers can track their shipments easily.",
+    "webstack": "I chose Next.js App Router for its ease of routing and Supabase for its out-of-the-box authentication and authorization features.\n\nAdditionally, I opted for PostgreSQL due to the complex data relationships needed for the application. PostgreSQL's relational database structure was perfect for handling multiple relationships, making it an ideal fit for this project compared to other Backend-as-a-Service platforms.",
+    "lessons": "One of the key things I learned during this project was implementing role-based authorization. Although I had come across this concept before, this was my first opportunity to apply it. I also faced some challenges setting up the database and authentication systems.\n\nHowever, after researching how to manage SQL relationships, most of my issues were resolved. This project greatly improved my understanding of relational databases and role-based access control.",
+    "link": [
+      {
+        "title": "GitHub",
+        "link": "https://github.com/oluwatimilehinawoniyi/hermes"
+      },
+      {
+        "title": "Live Site",
+        "link": "https://hermeslogistics.vercel.app/"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "image": [
+      "/images/countries-dark.png",
+      "/images/country-dark.png",
+      "/images/countries-light.png"
+    ],
+    "title": "Countries Catalogue",
+    "slug": "/countries-catalogue",
+    "category": "frontend application",
+    "stack": "Svelte/SvelteKit",
+    "details": "Get up-to-date information about every country in the world. You can also view neighboring countries and click on them for more info. The app includes light and dark mode themes to provide a better user experience based on user preference.",
+    "purpose": "This application was built to showcase the ability to interact with external APIs, handle dynamic routing, and create a seamless user experience. It allows users to explore countries' data, making it a useful resource for learning geography and gaining insight into countries' vital statistics.",
+    "webstack": "I chose Svelte and SvelteKit due to their simplicity and performance advantages. SvelteKit’s file-based routing system made it easy to set up dynamic pages for each country, and its reactive stores helped in efficiently managing state. The application also supports light and dark mode themes, using Svelte's built-in reactivity for theme toggling. For fetching data, I used the REST Countries API.",
+    "lessons": "Through this project, I learned how to work with SvelteKit's file-based routing and dynamic data fetching. I also became more comfortable with handling API requests and managing state in Svelte. The project helped me improve my knowledge of theme management, including how to implement and toggle between light and dark modes. Additionally, I gained experience in optimizing an application for both performance and accessibility, especially when working with large datasets.",
+    "link": [
+      {
+        "title": "github",
+        "link": "https://countries.oluwatimilehinawoniyi.com/"
+      },
+      {
+        "title": "live site",
+        "link": "https://countries.oluwatimilehinawoniyi.com/"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "image": ["/images/CSS_Unit.gif", "/images/CSS_UNIT.jpg"],
+    "title": "CSS Unit Converter",
+    "slug": "/CSS-unit-converter",
+    "category": "VS Code Extension",
+    "stack": "TypeScript",
+    "details": "A VS Code extension that converts CSS unit values directly and displays them in hover cards or as comments beside the code. It supports units like px, em, and rem, making CSS development faster and more intuitive.",
+    "purpose": "CSS Unit Converter is a VS Code extension designed to simplify CSS development by providing quick and easy unit conversions directly within your code editor. Whether you're dealing with px, em, or rem, this extension ensures that you can convert and visualize units effortlessly. \n\nThe motivation behind building this extension came from my struggle with understanding and converting certain units in CSS. For example, while I knew that 1rem equals 16px and could easily convert simple values like 2rem, more complex values like 2.35rem or 0.5em were a challenge. This led me to create a helper tool for unit conversions, and after hearing from another developer facing similar issues, I knew this would be a useful extension for many.",
+    "webstack": "This project was built using TypeScript to ensure type safety and a smoother development experience, especially when working with the VS Code API. I utilized the VS Code Extension API to create the hover cards and integrate directly into the editor.",
+    "lessons": "Building this extension involved diving deep into VS Code's documentation and learning about its API. It was also an opportunity to practice TypeScript in a new context. \n\nOne of the biggest challenges was figuring out how to implement real-time hover card functionality, but with plenty of research and problem-solving, I was able to achieve it. In the future, I'd like to expand the extension's functionality to support even more units and additional CSS tools.",
+    "link": [
+      {
+        "title": "github",
+        "link": "https://github.com/oluwatimilehinawoniyi/css-unit-converter"
+      },
+      {
+        "title": "live site",
+        "link": "https://marketplace.visualstudio.com/items?itemName=OluwatimilehinAwoniyi.css-unit-converter"
+      }
+    ]
+  }
+]

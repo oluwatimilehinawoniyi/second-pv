@@ -11,7 +11,7 @@ export default function PaperFilter({
     <div className="mt-12">
       <h1 className="capitalize">filter</h1>
       <div className="mt-4 flex flex-wrap gap-4">
-        {["all", ...filters].map((tag, index) => (
+        {["all", ...Array.from(new Set(filters.flatMap(tag => tag.split(", ").map(t => t.trim()))))].map((tag, index) => (
           <Filter
             selectedFilters={selectedFilters}
             tag={tag}

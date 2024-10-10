@@ -1,5 +1,5 @@
 import Links from "../common/Links";
-import { projects } from "@/app/data/projects";
+import projects from "@/app/data/projects.json";
 
 export default function Projects() {
   return (
@@ -22,7 +22,7 @@ export default function Projects() {
               <p className="mb-2 text-lg font-semibold capitalize">
                 {project.title}
               </p>
-              <p className="text-sm md:text-base">{project.details}</p>
+              <p className="text-sm md:text-base">{project.details.split('.').slice(0, 2).join('.')}</p>
             </div>
             <Links to={project.slug}>project details</Links>
           </div>

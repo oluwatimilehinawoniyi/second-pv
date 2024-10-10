@@ -1,10 +1,10 @@
-import { Eye, Github, House } from "lucide-react";
+import { House } from "lucide-react";
 import { Contact, GridLayout } from "../components";
 import Navigation from "../components/common/Navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Links from "../components/common/Links";
-import { projects } from "@/app/data/projects";
+import projects from "@/app/data/projects.json";
 import React from "react";
 import { Metadata } from "next";
 
@@ -39,8 +39,8 @@ export default function Page({ params }: { params: { slug: string } }) {
     (project) => project.slug.slice(1) === params.slug,
   );
 
-  console.log(Object.keys(currentProject[0]));
-  const { title, category, details, link, slug, stack } = currentProject[0];
+  // console.log(Object.keys(currentProject[0]));
+  const { title, category, details, lessons, image, purpose, webstack, link, slug, stack } = currentProject[0];
   return (
     <>
       <GridLayout
@@ -106,21 +106,14 @@ export default function Page({ params }: { params: { slug: string } }) {
             <h1 className="text-2xl font-bold capitalize md:text-3xl">
               {title}
             </h1>
-
-            <p className="md:text-justify">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              assumenda quidem accusamus adipisci beatae incidunt, deleniti,
-              blanditiis repellat deserunt molestias impedit, nemo laudantium
-              cum autem aliquid? Magnam voluptatum voluptate cum error quam
-              possimus. Dolor, rem itaque quaerat ducimus exercitationem nemo
-              quidem quis! Quibusdam provident tempora neque, nemo nesciunt
-              assumenda omnis?
-            </p>
-
+            {details.split("\n\n").map((paragraph, idx) => (
+              <p key={idx} className="md:text-justify">
+                {paragraph}
+              </p>
+            ))}
             <ul className="grid grid-cols-2 gap-4 lg:hidden">
               {Object.keys(currentProject[0]).map((key) => {
                 if (
-                  key === "title" ||
                   key === "stack" ||
                   key === "category" ||
                   key === "link"
@@ -140,7 +133,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                           <Link
                             href={item.link}
                             target="_blank"
-                            className="mb-2 flex items-center gap-2 capitalize underline underline-offset-2"
+                            className="mr-4 inline-flex items-center gap-2 capitalize underline underline-offset-2"
                             key={item.title}
                           >
                             <p>{item.title}</p>
@@ -153,67 +146,72 @@ export default function Page({ params }: { params: { slug: string } }) {
               })}
             </ul>
 
-            <div className="relative h-[350px] w-full">
+            {image[0] && <div className="relative h-[350px] w-full">
               <Image
-                src={"/images/placeholder.jpg"}
+                src={image[0]}
                 alt="placeholder"
                 fill
                 className="object-cover"
               />
-            </div>
+            </div>}
 
-            <div className="">
-              <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
-                project purpose
-              </h2>
-              <p className="md:text-justify">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-                assumenda quidem accusamus adipisci beatae incidunt, deleniti,
-                blanditiis repellat deserunt molestias impedit, nemo laudantium
-                cum autem aliquid? Magnam voluptatum voluptate cum error quam
-                possimus. Dolor, rem itaque quaerat ducimus exercitationem nemo
-                quidem quis! Quibusdam provident tempora neque, nemo nesciunt
-                assumenda omnis?
-              </p>
-            </div>
-            <div className="">
+            {purpose &&
+              <div>
+                <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
+                  project purpose
+                </h2>
+                <div className="space-y-4">
+                  {purpose.split("\n\n").map((paragraph, idx) => (
+                    <p key={idx} className="md:text-justify">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>}
+
+            {image[1] && <div className="relative h-[350px] w-full">
+              <Image
+                src={image[1]}
+                alt="placeholder"
+                fill
+                className="object-cover"
+              />
+            </div>}
+
+            {webstack && <div className="">
               <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
                 web stack explanation
               </h2>
-              <p className="md:text-justify">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-                assumenda quidem accusamus adipisci beatae incidunt, deleniti,
-                blanditiis repellat deserunt molestias impedit, nemo laudantium
-                cum autem aliquid? Magnam voluptatum voluptate cum error quam
-                possimus. Dolor, rem itaque quaerat ducimus exercitationem nemo
-                quidem quis! Quibusdam provident tempora neque, nemo nesciunt
-                assumenda omnis?
-              </p>
-            </div>
+              <div className="space-y-4">
+                {webstack.split("\n\n").map((paragraph, idx) => (
+                  <p key={idx} className="md:text-justify">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>}
 
-            <div className="relative h-[350px] w-full">
+            {lessons && <div className="">
+              <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
+                problems and lessons
+              </h2>
+              <div className="space-y-4">
+                {lessons.split("\n\n").map((paragraph, idx) => (
+                  <p key={idx} className="md:text-justify">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>}
+
+            {image[2] && <div className="relative h-[350px] w-full">
               <Image
-                src={"/images/placeholder.jpg"}
+                src={image[2]}
                 alt="placeholder"
                 fill
                 className="object-cover"
               />
-            </div>
-
-            <div className="">
-              <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
-                problems and lessons
-              </h2>
-              <p className="md:text-justify">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-                assumenda quidem accusamus adipisci beatae incidunt, deleniti,
-                blanditiis repellat deserunt molestias impedit, nemo laudantium
-                cum autem aliquid? Magnam voluptatum voluptate cum error quam
-                possimus. Dolor, rem itaque quaerat ducimus exercitationem nemo
-                quidem quis! Quibusdam provident tempora neque, nemo nesciunt
-                assumenda omnis?
-              </p>
-            </div>
+            </div>}
 
             <div className="gri gridcols-[repeat(auto-fit,minmax(280px,1fr))] flex flex-col gap-4 border-t border-footer-border pt-8 md:gap-4">
               <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
@@ -228,7 +226,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     <p className="mb-2 text-lg font-semibold capitalize">
                       {project.title}
                     </p>
-                    <p className="text-sm md:text-base">{project.details}</p>
+                    <p className="text-sm md:text-base">{project.details.split('.').slice(0, 2).join('.')}</p>
                   </div>
                   <Links to={project.slug}>project details</Links>
                 </div>

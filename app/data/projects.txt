@@ -1,0 +1,46 @@
+// UNPUBLISHED WORKS
+
+// {
+//   "id": 1,
+//   "image": ["/images/audiophile-full.png"],
+//   "title": "audiophile",
+//   "slug": "/audiophile",
+//   "category": "frontend application",
+//   "stack": "Svelte/Sveltekit",
+//   "details": "An ecommerce application",
+//   "purpose": "",
+//   "webstack": "",
+//   "lessons": "",
+//   "link": [
+//     {
+//       "title": "github",
+//       "link": "https://audiophile.oluwatimilehinawoniyi.com/"
+//     },
+//     {
+//       "title": "live site",
+//       "link": "https://audiophile.oluwatimilehinawoniyi.com/"
+//     }
+//   ]
+// },
+// {
+//   "id": 2,
+//   "image": [""],
+//   "title": "kicks",
+//   "slug": "/kicks",
+//   "category": "fullstack application",
+//   "stack": "React/TypeScript, Redux Toolkit, Framer Motion, Node/ExpressJS, PostgreSQL",
+//   "details": "Kicks is an ecommerce platform designed for selling a wide range of shoes, from running shoes to fashionable sneakers",
+//   "purpose": "The application provides a seamless user experience, allowing customers to browse through collections, view product details, add items to their cart, and make purchases.\n\nThe goal of this project was to build a complete fullstack application with real-world ecommerce functionality, showcasing my skills in building performant, scalable web applications while incorporating clean design and responsive layouts.",
+//   "webstack": "I chose to use Node/ExpressJS and PostgreSQL for the backend due to their flexibility and power in handling complex queries. React/TypeScript with Redux Toolkit was used on the frontend to manage state efficiently, and Framer Motion was utilized to bring interactive animations into the user experience. This stack helped me focus on building features like user authentication, cart management, and a smooth checkout process.",
+//   "lessons": "While building Kicks, I learned how to optimize backend performance, especially in querying large datasets from a SQL database. I also deepened my understanding of frontend state management with Redux Toolkit and refined my ability to create smooth UI transitions using Framer Motion. Balancing frontend performance with backend efficiency was a crucial takeaway from this project.",
+//   "link": [
+//     {
+//       "title": "github",
+//       "link": "https://github.com/oluwatimilehinawoniyi/kicks"
+//     },
+//     {
+//       "title": "live site",
+//       "link": "https://audiophile.oluwatimilehinawoniyi.com/"
+//     }
+//   ]
+// },
