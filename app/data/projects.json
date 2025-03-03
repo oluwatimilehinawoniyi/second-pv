@@ -2,6 +2,32 @@
   {
     "id": 3,
     "image": [
+      "/images/screenCard.png",
+      "/images/screenCard1.png",
+      "/images/screenCard2.png"
+    ],
+    "title": "Estatein",
+    "slug": "/estatein",
+    "category": "Fullstack Application",
+    "stack": "Next.js (TypeScript), Zustand, Nestjs, PostgreSQL",
+    "details": "Estatein is a modern real estate platform designed to showcase properties in an elegant and interactive way. The platform enables users to browse through listings with smooth filtering options, ensuring they find properties that match their preferences. The frontend prioritizes performance optimizations, sleek UI animations, and a seamless user experience. The current focus is on making the frontend provide an intuitive and engaging interface for potential buyers.",
+    "purpose": "The goal of Estatein is to revolutionize the real estate experience by offering a centralized platform where users can browse, list, and manage properties with ease. Whether you're a homebuyer searching for the perfect place or an agent handling multiple listings, Estatein ensures smooth transactions, clear communication, and efficient property management—all in one place.",
+    "webstack": "Next.js (App Router) was chosen for its seamless routing and server-side rendering capabilities, ensuring optimal performance for real estate listings. NestJS powers the backend, providing a structured and scalable API for handling property data and user interactions. PostgreSQL was selected for its relational database structure, allowing efficient management of property details, user preferences, and transactional records.",
+    "lessons": "Working on Estatein has deepened my understanding of frontend performance optimizations, especially when handling dynamic property listings and interactive filtering. I explored ways to enhance UX through animations and responsiveness while keeping the UI smooth. Since I haven't integrated backend functionalities yet, I realized the importance of efficient state management and am considering Zustand for handling global state. This project has also pushed me to think critically about structuring frontend logic in a scalable way, making future backend integration smoother.",
+    "link": [
+      {
+        "title": "GitHub",
+        "link": "https://github.com/oluwatimilehinawoniyi/estatein"
+      },
+      {
+        "title": "Live Site",
+        "link": "https://estatein.oluwatimilehinawoniyi.com/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "image": [
       "/images/hermes.png",
       "/images/Hermes.png",
       "/images/Hermes1.png"
