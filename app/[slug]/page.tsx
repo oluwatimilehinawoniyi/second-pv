@@ -146,7 +146,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               })}
             </ul>
 
-            {image[0] && <div className="relative h-[350px] w-full">
+            {image[0] && <div className="relative h-[420px] w-full">
               <Image
                 src={image[0]}
                 alt="placeholder"
@@ -169,7 +169,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                 </div>
               </div>}
 
-            {image[1] && <div className="relative h-[350px] w-full">
+            {image[1] && <div className="relative h-[420px] w-full">
               <Image
                 src={image[1]}
                 alt="placeholder"
@@ -204,7 +204,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               </div>
             </div>}
 
-            {image[2] && <div className="relative h-[350px] w-full">
+            {image[2] && <div className="relative h-[420px] w-full">
               <Image
                 src={image[2]}
                 alt="placeholder"
