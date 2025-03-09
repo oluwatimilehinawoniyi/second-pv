@@ -190,9 +190,9 @@ export default function Page({ params }: { params: { slug: string } }) {
                 ))}
               </div>
             </div>}
-            {image[4] && <div className="relative h-[420px] w-full">
+            {image[3] && <div className="relative h-[420px] w-full">
               <Image
-                src={image[4]}
+                src={image[3]}
                 alt="placeholder"
                 fill
                 className="object-cover"
