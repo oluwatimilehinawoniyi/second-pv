@@ -80,32 +80,6 @@
   },
   {
     "id": 4,
-    "image": [
-      "/images/countries-dark.png",
-      "/images/country-dark.png",
-      "/images/countries-light.png"
-    ],
-    "title": "Countries Catalogue",
-    "slug": "/countries-catalogue",
-    "category": "frontend application",
-    "stack": "Svelte/SvelteKit",
-    "details": "Get up-to-date information about every country in the world. You can also view neighboring countries and click on them for more info. The app includes light and dark mode themes to provide a better user experience based on user preference.",
-    "purpose": "This application was built to showcase the ability to interact with external APIs, handle dynamic routing, and create a seamless user experience. It allows users to explore countries' data, making it a useful resource for learning geography and gaining insight into countries' vital statistics.",
-    "webstack": "I chose Svelte and SvelteKit due to their simplicity and performance advantages. SvelteKit’s file-based routing system made it easy to set up dynamic pages for each country, and its reactive stores helped in efficiently managing state. The application also supports light and dark mode themes, using Svelte's built-in reactivity for theme toggling. For fetching data, I used the REST Countries API.",
-    "lessons": "Through this project, I learned how to work with SvelteKit's file-based routing and dynamic data fetching. I also became more comfortable with handling API requests and managing state in Svelte. The project helped me improve my knowledge of theme management, including how to implement and toggle between light and dark modes. Additionally, I gained experience in optimizing an application for both performance and accessibility, especially when working with large datasets.",
-    "link": [
-      {
-        "title": "github",
-        "link": "https://countries.oluwatimilehinawoniyi.com/"
-      },
-      {
-        "title": "live site",
-        "link": "https://countries.oluwatimilehinawoniyi.com/"
-      }
-    ]
-  },
-  {
-    "id": 5,
     "image": ["/images/CSS_Unit.gif", "/images/CSS_UNIT.jpg"],
     "title": "CSS Unit Converter",
     "slug": "/CSS-unit-converter",
