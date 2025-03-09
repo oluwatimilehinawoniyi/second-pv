@@ -1,6 +1,6 @@
 [
   {
-    "id": 3,
+    "id": 1,
     "image": [
       "/images/screenCard.png",
       "/images/screenCard1.png",
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 2,
     "image": [
       "/images/hermes.png",
       "/images/Hermes.png",
@@ -48,6 +48,33 @@
       {
         "title": "Live Site",
         "link": "https://hermeslogistics.vercel.app/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "image": [
+      "/images/estatein-dashboard1.png",
+      "/images/estatein-dashboard2.png",
+      "/images/estatein-dashboard3.png",
+      "/images/estatein-dashboard4.png"
+    ],
+    "title": "Estatein CMS",
+    "slug": "/estatein-cms",
+    "category": "Admin Dashboard",
+    "stack": "Next.js (TypeScript), Zod, Java/Springboot, PostgreSQL",
+    "details": "Estatein CMS is a powerful dashboard built to streamline property management for the Estatein platform. The admin panel allows authorized users to perform CRUD operations on property listings, manage featured properties, and oversee platform analytics. The dashboard is optimized for responsiveness, ensuring a seamless experience across devices. Zod is used for robust form validation, preventing incorrect data input, while React hooks efficiently handles global state management.",
+    "purpose": "The Estatein CMS was developed to give administrators full control over property listings and platform data. It simplifies property management by allowing admins to create, update, and delete listings in real-time. Additionally, the built-in analytics components provide insights into property trends, user interactions, and overall platform performance. With authentication mechanisms in place, only authorized users can access and modify data, ensuring security and reliability.",
+    "webstack": "Next.js (App Router) was chosen for its efficiency in handling admin panel routing and server-side rendering for improved performance. React Hooks was implemented for state management, ensuring smooth updates across the dashboard without unnecessary re-renders. Form validation is handled by Zod, enforcing data integrity when creating or editing listings. Springboot (Java) powers the backend API, providing a structured and secure way to interact with PostgreSQL, which serves as the relational database for managing property records and admin operations.",
+    "lessons": "Building the Estatein CMS deepened my understanding of admin dashboard structures, especially in handling role-based authentication and real-time property updates. Implementing React Hooks for state management provided insight into optimizing performance within interactive admin panels. Working with Zod enhanced my approach to form validation, ensuring data consistency across the platform. This project also highlighted the importance of UI responsiveness and accessibility in admin tools, ensuring a smooth experience for users managing the platform.",
+    "link": [
+      {
+        "title": "GitHub",
+        "link": "https://github.com/oluwatimilehinawoniyi/estatein-cms"
+      },
+      {
+        "title": "Live Site",
+        "link": "https://admin.estatein.oluwatimilehinawoniyi.com/"
       }
     ]
   },

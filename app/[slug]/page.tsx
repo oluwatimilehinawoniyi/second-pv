@@ -190,7 +190,14 @@ export default function Page({ params }: { params: { slug: string } }) {
                 ))}
               </div>
             </div>}
-
+            {image[4] && <div className="relative h-[420px] w-full">
+              <Image
+                src={image[4]}
+                alt="placeholder"
+                fill
+                className="object-cover"
+              />
+            </div>}
             {lessons && <div className="">
               <h2 className="mb-2 text-xl font-bold capitalize md:text-2xl">
                 problems and lessons
