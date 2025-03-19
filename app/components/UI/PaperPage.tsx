@@ -1,5 +1,5 @@
 "use client";
-import { Home, House } from "lucide-react";
+import { House } from "lucide-react";
 import { GridLayout } from "@/app/components";
 import Navigation from "@/app/components/common/Navigation";
 import PaperList from "@/app/papers/PaperList";
@@ -8,7 +8,7 @@ import { useState } from "react";
 import PaperFilter from "./PaperFilter";
 import React from "react";
 
-const PUBLISH = false
+const PUBLISH = true
 
 export default function PaperPage() {
   const [selectedFilters, setSelectedFilters] = useState<string[]>(["all"]);
@@ -22,10 +22,12 @@ export default function PaperPage() {
       setSelectedFilters(["all"]);
     } else {
       setSelectedFilters((prevFilters) => {
-        const newFilters = prevFilters.filter((item) => item !== "all");
+        let newFilters = prevFilters.filter((item) => item !== "all");
 
         if (newFilters.includes(tag)) {
-          return newFilters.filter((item) => item !== tag);
+          newFilters = newFilters.filter((item) => item !== tag);
+          if (newFilters.length === 0) return ["all"];
+          return newFilters;
         } else {
           return [...newFilters, tag];
         }
@@ -35,7 +37,9 @@ export default function PaperPage() {
 
   const filteredPapers = selectedFilters.includes("all")
     ? papers
-    : papers.filter((paper) => selectedFilters.includes(paper.tag));
+    : papers.filter((paper) =>
+      paper.tag.split(", ").some(tag => selectedFilters.includes(tag))
+    );
 
   return (
     <GridLayout

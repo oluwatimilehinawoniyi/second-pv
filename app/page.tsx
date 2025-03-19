@@ -7,7 +7,7 @@ export const metadata = {
   description: "Welcome to the portfolio of Oluwatimilehin Awoniyi",
 };
 
-const PUBLISH = false
+const PUBLISH = true
 
 
 export default function Home() {

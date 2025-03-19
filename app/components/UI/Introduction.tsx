@@ -31,9 +31,10 @@ export default function Introduction() {
       <div className="mt-8">
         <p className="mb-2 md:text-justify">
           {/* I love learning continously and solving problems at the same time: Programming offers me this. knowing how things work and dictating them */}
-          I am keen on great user experience (UX) while building market-fit
+          {/* I am keen on great user experience (UX) while building market-fit
           products. Currently polishing my skills/knowldege on performance
-          optimization and creating appealing SVG animations.
+          optimization and creating appealing SVG animations. */}
+          I am curious about building scalable and efficient software systems that power seamless user experiences. Currently deepening my expertise in performance optimization, API and database design, and distributed systems.
           <br />
           I’m on a lifelong mission to fusing technology (particularly Internet
           of Things) with education, agriculture, and defence industry.
